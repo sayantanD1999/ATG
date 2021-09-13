@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style_responsive.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="./index.js"></script>
+    <title>ATG</title>
+</head>
+
+<body>
+    <nav class="big_nav">
+        <div class="nav_contents"> <img src="./assets/pics/logo.png" id="logo_img" alt="logo"> </div>
+        <div class="nav_contents"> <i class="fas fa-search"></i> <input type="search" name="search" id="search_bar"
+                placeholder="Search for your favourite groups in ATG"> </div>
+        <div class="nav_contents" id="crt_acc">
+            <p>Create account. <a href="#" onclick="signup()">It's free</a> <i class="fas fa-caret-down"></i></p>
+        </div>
+        <div id="user_info">
+            <img src="./assets/pics/user4.png" alt="user"> Siddharth Goyal <i class="fas fa-caret-down"></i>
+        </div>
+    </nav>
+
+    <nav class="small_nav">
+        <img src="./assets/pics/Rectangle.png" alt="">
+        <img src="./assets/pics/Oval.png" alt="">
+        <img src="./assets/pics/Path.png" onclick="signup()" alt="">
+    </nav>
+
+
+    <div class="img-bg">
+        <div class="black_bg">
+            <div class="small_sc_bg_div">
+                <i class="fas fa-arrow-left" id="back"></i>
+                <button type="button" class="btn btn-outline-light" id="grp_btn">Join Group</button>
+            </div>
+            <figcaption>
+                <big>
+                    <b>Computer Engineering</b>
+                    <br>
+                    <p>142,765 Computer Engineers follow this</p>
+                </big>
+
+            </figcaption>
+        </div>
+    </div>
+
+    <div class="add_post">
+        <i class="fas fa-pen"></i>
+    </div>
+
+    <div class="get-in">
+
+        <div>
+            <i class="fas fa-times-circle big_cross" onclick="close_all()"></i>
+            <div class="box" id="sign-in">    
+                <div class="row form-container">
+                    <center class="big_sc">
+                        <p style="color: green;">Let's learn, share & inspire each other with our passion for computer
+                            engineering. Sign up now 🤘🏼</p>
+                    </center>
+                    <div class="small_sc">
+                        <b>
+                            <p>Welcome back !</p>
+                        </b>
+                        <i class="fas fa-times-circle" onclick="close_all()"></i>
+                    </div>
+                    <div class="top_div big_sc">
+                        <h2>Sign In</h2>
+                        <p>Don't have an account? <a href="#" onclick="signup()">Create new for free</a> </p>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="div2">
+                            <form id="form">
+                                <div id="form_ip_div">
+                                    <div id="ip3">
+                                        <input class="inp" type="email" name="" placeholder="Email">
+                                    </div>
+                                    <div id="ip4">
+                                        <input class="inp" type="password" name="" id="pswd_ip" placeholder="Password"><i
+                                            style="margin-left: -30px;" class="fas fa-eye" id="pswd"
+                                            onclick="toggle_pswd()"></i>
+                                    </div>
+                                </div>
+                                <div class="small_sc">
+                                    <button type="submit" onclick="enter()" class="btn2">Sign In</button>
+                                    <a href="#" onclick="signup()">or Create account</a>
+                                </div>
+    
+                                <center class="big_sc">
+                                    <button type="submit" onclick="enter()" class="btn2">Sign In</button>
+                                </center>
+                                <div class="small_sc_btn">
+                                    <i class="fab fa-facebook"></i> Sign Up with Facebook
+                                </div>
+                                <div class="small_sc_btn">
+                                    <i class="fab fa-google"></i> Sign Up with Google
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 img_div">
+                        <img src="./assets/pics/form_img.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="box" id="sign-up">
+            <div class="row form-container">
+                <center class="big_sc">
+                    <p style="color: green;">Let's learn, share & inspire each other with our passion for computer
+                        engineering. Sign up now 🤘🏼</p>
+                </center>
+                <div class="small_sc">
+                    <b>
+                        <p>Create Account</p>
+                    </b>
+                    <i class="fas fa-times-circle" onclick="close_all()"></i>
+                </div>
+                <div class="top_div big_sc">
+                    <h2>Create Account</h2>
+                    <p>Already have an account? <a href="#" onclick="signin()">Sign In</a> </p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="div2">
+                        <form id="form">
+                            <div id="form_ip_div">
+                                <div id="ip1">
+                                    <input class="inp" type="text" placeholder="First Name">
+                                </div>
+                                <div id="ip2">
+                                    <input class="inp" type="text" placeholder="Last Name">
+                                </div>
+                                <div id="ip3">
+                                    <input class="inp" type="email" name="" placeholder="Email">
+                                </div>
+                                <div id="ip4">
+                                    <input class="inp" type="password" name="" id="pswd_ip2" placeholder="Password"><i
+                                        style="margin-left: -30px;" class="fas fa-eye" id="pswd2"
+                                        onclick="toggle_pswd()"></i>
+                                </div>
+                                <div id="ip5">
+                                    <input class="inp" type="password" name="" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="small_sc">
+                                <button type="submit" onclick="enter()" class="btn2">Create Account</button>
+                                <a href="#" onclick="signin()">or Sign In</a>
+                            </div>
+                            <center class="big_sc">
+                                <button type="submit" onclick="enter()" class="btn2">Sign Up</button>
+                            </center>
+                            <div class="small_sc_btn">
+                                <i class="fab fa-facebook"></i> Sign Up with Facebook
+                            </div>
+                            <div class="small_sc_btn">
+                                <i class="fab fa-google"></i> Sign Up with Google
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 img_div">
+                    <img src="./assets/pics/form_img.png" alt="">
+                    <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <section id="contents">
+        <nav class="second_nav">
+            <div class="nav2">
+                <div class="nav_contents active">All Posts(32)</div>
+                <div class="nav_contents">Article</div>
+                <div class="nav_contents">Event</div>
+                <div class="nav_contents">Education</div>
+                <div class="nav_contents">Job</div>
+            </div>
+            <div class="second_nav_btns" id="loggedout_nav">
+                <button type="button" class="btn btn-secondary"> Write a Post <i class="fas fa-caret-down"></i></button>
+                <button type="button" class="btn btn-primary"> <img src="./assets/pics/Vector.png" alt="users"> Join
+                    Group</button>
+            </div>
+            <div class="second_nav_btns" id="loggedin_nav">
+                <button type="button" class="btn btn-secondary"> Write a Post <i class="fas fa-caret-down"></i></button>
+                <button type="button" class="btn btn-outline-dark"> <i class="fas fa-sign-out-alt"></i>Leave
+                    Group</button>
+            </div>
+        </nav>
+
+        <nav class="second_nav_small_sc">
+            <p><b>Post(368)</b></p>
+            <button class="btn btn-light">Filter : All <i class="fas fa-caret-down"></i></button>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card-container">
+                   
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/pics/img4.png" alt="Card image cap">
+                        <div class="card-body">
+                            <img src="./assets/pics/Article.png" alt="">
+                            <div class="sub-head">
+                                <p class="card-text">What if famous brands had regular fonts? Meet RegulaBrands!</p>
+                                <div class="dropdown">
+                                    <button class="option"> <img src="./assets/pics/dots.png" alt=""></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Edit</a>
+                                        <a href="#">Report</a>
+                                        <a href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…
+                            </p>
+                            <div class="sub-div big_sc">
+                                <div>
+                                    <img src="./assets/pics/user1.png" alt="">
+                                    <b>Sarthak Kamra</b>
+                                </div>
+                                <div>
+                                    <i class="far fa-eye"></i>
+                                    <p id="views">1.4K views</p>
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                            </div>
+                            <div class="small_sc">
+                                <img src="./assets/pics/user1.png" alt="">
+                                <div class="name_div">
+                                    <b>Sarthak Kamra</b>
+                                    <p id="views">1.4K views</p>
+                                </div>
+                                <button class="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/pics/img2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <img src="./assets/pics/Education.png" alt="">
+                            <div class="sub-head">
+                                <p class="card-text">Tax Benefits for Investment under National Pension Scheme launched by Government</p>
+                                <div class="dropdown">
+                                    <button class="option"> <img src="./assets/pics/dots.png" alt=""></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Edit</a>
+                                        <a href="#">Report</a>
+                                        <a href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…
+                            </p>
+                            <div class="sub-div big_sc">
+                                <div>
+                                    <img src="./assets/pics/user2.png" alt="">
+                                    <b>Sarah West</b>
+                                </div>
+                                <div>
+                                    <i class="far fa-eye"></i>
+                                    <p id="views">1.4K views</p>
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                            </div>
+                            <div class="small_sc">
+                                <img src="./assets/pics/user2.png" alt="">
+                                <div class="name_div">
+                                    <b>Sarah West</b>
+                                    <p id="views">1.4K views</p>
+                                </div>
+                                <button class="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/pics/img3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <img src="./assets/pics/Meetup.png" alt="">
+                            <div class="sub-head">
+                                <p class="card-text">Finance & Investment Elite Social Mixer @Lujiazui</p>
+                                <div class="dropdown">
+                                    <button class="option"> <img src="./assets/pics/dots.png" alt=""></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Edit</a>
+                                        <a href="#">Report</a>
+                                        <a href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="far fa-calendar"></i>Innovaccer Analytics Private Ltd.
+                                <i class="fas fa-map-marker-alt"></i>Ahmedabad, India
+                            </div>
+                            <button class="time_job" style="color: orangered;"> <b>View Website</b> </button>
+                            <div class="sub-div big_sc">
+                                <div>
+                                    <img src="./assets/pics/user3.png" alt="">
+                                    <b>Ronal Jones</b>
+                                </div>
+                                <div>
+                                    <i class="far fa-eye"></i>
+                                    <p id="views">1.4K views</p>
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                            </div>
+                            <div class="small_sc">
+                                <img src="./assets/pics/user2.png" alt="">
+                                <div class="name_div">
+                                    <b>Ronal Jones</b>
+                                    <p id="views">1.4K views</p>
+                                </div>
+                                <button class="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                            <div class="card-body">
+                                <img src="./assets/pics/Job.png" alt="">
+                                <div class="sub-head">
+                                    <h2>Software Developer</h2>
+                                    <div class="dropdown">
+                                        <button class="option"> <img src="./assets/pics/dots.png" alt=""></button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Edit</a>
+                                            <a href="#">Report</a>
+                                            <a href="#">Option 3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="fas fa-briefcase"></i>Innovaccer Analytics Private Ltd.
+                                    <i class="fas fa-map-marker-alt"></i>Noida, India
+                                </div>
+                                <button class="time_job"> <b>Apply on Timesjobs</b> </button>
+                                <div class="sub-div big_sc">
+                                    <div>
+                                        <img src="./assets/pics/user4.png" alt="">
+                                        <b>Joseph Gray</b>
+                                    </div>
+                                    <div>
+                                        <i class="far fa-eye"></i>
+                                        <p id="views">1.4K views</p>
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="small_sc">
+                                    <img src="./assets/pics/user2.png" alt="">
+                                    <div class="name_div">
+                                        <b>Joseph Gray</b>
+                                        <p id="views">1.4K views</p>
+                                    </div>
+                                    <button class="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 big_sc">
+                <div class="loc">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="search" name="" placeholder="Noida, India" id="grp_ip">
+                    <i class="fas fa-pen"></i>
+                    <hr>
+                    <i class="fas fa-exclamation-circle"></i>
+                    Your location will help us serve better and extend a personalised experience.
+                </div>
+
+                <div id="groups" class="big_sc">
+                    <div id="loc_ip_div" >
+                        <i class="fas fa-map-marker-alt" id="marker"></i>
+                        <input type="search" name="" placeholder="Enter location" id="grp_ip">
+                        <i class="fas fa-times"></i>
+                        <hr>
+                    </div>
+                    <div>
+                        <i class="fas fa-exclamation-circle"></i>
+                        Your location will help us serve better and extend a personalised experience. 
+                    </div>
+                    <div>
+                        <i class="fas fa-thumbs-up"></i>
+                        RECOMMENDED GROUPS
+                    </div>
+                    <div class="sub_groups">
+                        <img src="./assets/pics/Group1.png" alt="">
+                        Leisure
+                        <button id="followed">Followed</button>
+                    </div>
+                    <div class="sub_groups">
+                        <img src="./assets/pics/Group2.png" alt="">
+                        Activism
+                        <button class="follow">Follow</button>
+                    </div>
+                    <div class="sub_groups">
+                        <img src="./assets/pics/Group3.png" alt="">
+                         MBA
+                        <button class="follow">Follow</button>
+                    </div>
+                    <div class="sub_groups">
+                        <img src="./assets/pics/Group4.png" alt="">
+                        Philanthropist
+                        <button class="follow">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
