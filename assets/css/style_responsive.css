@@ -15,7 +15,7 @@
     align-items: center;
   }
   .img-bg {
-    background-image: url("/assets/pics/bg2.png");
+    background-image: url("./assets/pics/bg2.png");
     height: 246px;
   }
 
