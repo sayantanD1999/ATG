@@ -4,7 +4,6 @@ function signup() {
     document.getElementsByClassName('box')[0].style.display="flex";
     document.getElementById('sign-in').style.display="none";
     document.getElementById('sign-up').style.display="flex";
-    document.getElementsByClassName('loc')[0].style.display="none";
 }
 
 function signin() {
@@ -12,7 +11,7 @@ function signin() {
     document.getElementsByClassName('box')[0].style.display="flex";
     document.getElementById('sign-in').style.display="flex";
     document.getElementById('sign-up').style.display="none";
-    document.getElementsByClassName('loc')[0].style.display="none";
+
 }
 
 function enter(){
