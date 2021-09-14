@@ -219,7 +219,7 @@ figcaption {
 .form-container {
   background-color: #fff;
   min-width: 60%;
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
   border-radius: 4px;
   padding: 20px;
@@ -233,7 +233,7 @@ figcaption {
 
 #form_ip_div {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 200px));
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-template-areas:
     "ip1 ip2"
     "ip3 ip3"
